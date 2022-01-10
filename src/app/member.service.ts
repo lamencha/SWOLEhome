@@ -10,7 +10,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class MemberService {
 
-  constructor(private http: HttpClient, private messageService: MessageService) { }
+  constructor(
+    private http: HttpClient, 
+    private messageService: MessageService){ }
 
   getMembers(): Observable<Member[]> {
     const members = of(MEMBERS);

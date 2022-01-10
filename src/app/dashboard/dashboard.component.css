@@ -39,9 +39,7 @@ h2 {
     align-self: auto;
   }
 
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-}
+
   
   @media (min-width: 600px) {
     a {
