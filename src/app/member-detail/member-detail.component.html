@@ -1,0 +1,15 @@
+<! –– div *ngIf only displays if there is a selected member, when the .name is empty it error out  ––>
+<div *ngIf="member">
+    <h2>{{member.name | uppercase}} Details</h2>
+    
+    <div>
+      <span>id: {{member.id}}</span>
+      <label for="member-name">Member name: 
+      <input id="member-name" [(ngModel)]="member.name" placeholder="name">
+    </label>
+    </div>
+    <BR/>
+    <button (click)="goBack()">Back</button>
+</div>
+
+

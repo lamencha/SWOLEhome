@@ -1,0 +1,7 @@
+<h2>Founding Members</h2>
+<div class="members-menu">
+  <a *ngFor="let member of members" 
+  routerLink="/detail/{{member.id}}">
+    {{member.name}}
+  </a>
+</div>
