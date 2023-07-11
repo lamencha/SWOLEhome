@@ -10,14 +10,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class MemberService {
 
+  private membersUrl = 'api/members';
+
   constructor(
     private http: HttpClient, 
     private messageService: MessageService){ }
 
+    /** GET heroes from the server */
   getMembers(): Observable<Member[]> {
-    const members = of(MEMBERS);
-    this.messageService.add('MemberService: Member fetched');
-    return members;
+    return this.http.get<Member[]>(this.membersUrl)
   }
 
   getMember(id: number): Observable<Member> {
